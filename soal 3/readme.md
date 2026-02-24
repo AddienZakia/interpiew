@@ -25,7 +25,7 @@ Tugas Anda adalah:
 
 - Huruf bersifat case-sensitive.
 - Urutan karakter tidak harus sama.
-- Karakter tidak harus berurutan (tidak perlu kontigu).
+- Karakter tidak harus berurutan.
 - Jika suatu huruf muncul lebih dari sekali dalam target, maka hasil harus mengandung huruf tersebut minimal sebanyak kemunculannya.
 - Urutan hasil mengikuti urutan asli dalam `searchResult`.
 - Duplikasi tidak perlu dihapus.
