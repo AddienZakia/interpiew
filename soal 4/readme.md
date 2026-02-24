@@ -17,7 +17,7 @@ Bantulah programmer tersebut untuk membuat fungsi yang dapat melakukan transform
   `x|`
 - Setelah transformasi dasar:
 
-  - Setiap karakter (misalnya `x|` atau `|x`) harus mengurung karakter `%`. kecuali jika karakter tersebut adalah vokal, maka mengurung karakter `#` **"setelah karakter vokal tersebut"**.
+  - Setiap karakter (misalnya `x|` atau `|x`) harus mengurung karakter `%`. kecuali jika karakter tersebut adalah vokal, maka mengurung karakter `#` **"setelah karakter vokal pertama yang berada di antara dua karakter vokal atau berada pada posisi awal kata jika karakter kedua merupakan bukan vokal"**.
   - contoh: `BC` -> `B|%C|`, `AB` -> `|A#B|`, `AA` -> `|A#|A`, `BA` -> `B|%A|`
 
 - Setiap kata diapit oleh karakter `=`
