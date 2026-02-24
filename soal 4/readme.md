@@ -17,8 +17,8 @@ Bantulah programmer tersebut untuk membuat fungsi yang dapat melakukan transform
   `x|`
 - Setelah transformasi dasar:
 
-  - Setiap karakter (misalnya `x|` atau `|x`) harus diapit dengan karakter `%`. kecuali jika karakter tersebut adalah vokal, maka diapit dengan karakter `#`.
-  - contoh: `BC` -> `B|%C|`, `AB` -> `|A#B|` `AA` -> `|A#|A`
+  - Setiap karakter (misalnya `x|` atau `|x`) harus diapit dengan karakter `%`. kecuali jika karakter tersebut adalah vokal, maka diapit dengan karakter `#` **setelah karakter vokal tersebut**.
+  - contoh: `BC` -> `B|%C|`, `AB` -> `|A#B|`, `AA` -> `|A#|A`, `BA` -> `B|%A|`
 
 - Setiap kata diapit oleh karakter `=`
 - Tidak diperbolehkan menggunakan:
@@ -42,46 +42,62 @@ Sebuah string hasil transformasi sesuai aturan.
 
 ---
 
-## Contoh 1
-
-### Input
+## Contoh
 
 ```
-hello world
+Input = hello world
+Output = h|%|e#l|%l|%|o=w|%|o#r|%l|%d|
+
+Input = Code
+Output = C|%|o#d|%|e
+
+Input = aku kamu
+Output = |a#k|%|u=k|%|a#m|%|u
+
+Input = Aku Aslab
+Output = |A#k|%|u=|A#s|%l|%|a#b|
 ```
 
-### Output
+## Helper!
 
-```
-h|%|e#l|%l|%|o=w|%|o#r|%l|%d|
-```
+- `String.split(string delimiter)` untuk memisahkan string dari delimiter
 
----
+contoh:
 
-## Contoh 2
+```java
+String teks = "aslab-provikom";
 
-### Input
-
-```
-Code
+System.out.println(teks.split("-")); // output: {"aslab", "provikom"}
 ```
 
-### Output
+- `String.toLowerCase()` untuk konversi string menjadi huruf kecil semua
+- `String.toUpperCase()` untuk konversi string menjadi huruf besar semua
 
-```
-C|%|o#d|%|e
-```
+contoh:
 
-## Contoh 3
+```java
+String teks = "Aslab Provikom";
 
-### Input
-
-```
-aku kamu
+teks.toLowerCase(); // output: aslab provikom
+teks.toUpperCase(); // output: ASLAB PROVIKOM
 ```
 
-### Output
+- `String.charAt(int i)` untuk mendapatkan character pada string di index i
 
+contoh:
+
+```java
+String teks = "aslab";
+
+teks.chartAt(0); // output: 'a'
 ```
-|a#k|%|u=k|%|a#m|%|u
+
+- `String.substring(int start, int end)` untk mendapatkan string pada index ke-_start_ hingga index ke-_end_
+
+contoh:
+
+```java
+String teks = "provikom";
+
+teks.substring(0, 3); // output: 'prov'
 ```
