@@ -73,3 +73,4 @@ true
 ## Hint
 
 - Kamu bisa menggunakan `Object[] name` untuk membuat nested array
+- Gunakan `instanceof` pada _condition_ untuk membandingkan suatu object merupakan suatu instance dari _class_ tertentu
