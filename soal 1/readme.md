@@ -72,4 +72,4 @@ true
 
 ## Hint
 
-- Kamu bisa menggunakan `Object{} name` untuk membuat nested array
+- Kamu bisa menggunakan `Object[] name` untuk membuat nested array
