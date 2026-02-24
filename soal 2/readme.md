@@ -29,10 +29,6 @@ Semua barisan bilangan bulat secara menaik (descending)
 
 ---
 
-## Batasan
-
-- Total jumlah elemen dalam seluruh array tidak melebihi ( 10^5 )
-- Nilai elemen berada dalam rentang ( -10^9 \leq A[i][j] \leq 10^9 )
 
 ## Contoh 1
 
